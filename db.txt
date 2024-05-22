@@ -6,4 +6,5 @@ Krzysztof 20
 Kowalski 40
 Mateusz 22
 Dominik 22
-Dominik1 20
+Dominik 20
+Dawid Kowal 18

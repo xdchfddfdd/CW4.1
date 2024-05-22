@@ -12,30 +12,33 @@ import java.util.Scanner;
 
 class Main {
   public static void main(String[] args) {
-    try {
       Service s = new Service();
       Scanner scanner = new Scanner(System.in);
-
+      int prog = 0;
+ try {
       System.out.println("Wybierz opcję:");
       System.out.println("1. Dodaj studenta");
       System.out.println("2. Wyświetl wszystkich studentów");
-      int option = scanner.nextInt();
+      prog = scanner.nextInt();
       scanner.nextLine(); 
 
-      switch(option) {
+      switch(prog) {
            case 1:
           System.out.println("Podaj imię studenta:");
           String name = scanner.nextLine();
-          System.out.println("Podaj wiek studenta:");
+          System.out.println("Podaj nazwisko studenta:");
+            String nazw = scanner.nextLine();
+           System.out.println("Podaj wiek studenta:");
           int age = scanner.nextInt();
+            
           scanner.nextLine(); 
-          s.addStudent(new Student(name, age));
+          s.addStudent(new Student(name, nazw, age));
           System.out.println("Student dodany.");
           break;
           case 2:
           var students = s.getStudents();
           for(Student current : students) {
-            System.out.println("Imię: " + current.GetName() + ", Wiek: " + current.GetAge());
+            System.out.println("Imię: " + current.GetName() + ", Wiek: " + current.GetAge() + "Imię: " + current.GetNazw() );
           }
           break;
         default:
